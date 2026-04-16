@@ -36,19 +36,19 @@ const projects = [
     title:  'Imvelaphi Gallery',
     desc:   'Cultural gallery showcasing Xhosa heritage through an interactive, responsive web experience designed to educate and engage.',
     tags:   ['HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/MDtechcave',
+    github: 'https://github.com/MDtechcave/My-Gallery',
   },
   {
     title:  'Healthy Habits',
     desc:   'E-commerce meal subscription platform with user accounts, subscription management, and loyalty-based discount logic.',
-    tags:   ['Vue', 'Node.js', 'MySQL'],
-    github: 'https://github.com/MDtechcave',
+    tags:   ['Vue', 'MySQL'],
+    github: 'https://github.com/MDtechcave/Frontend',
   },
   {
     title:  'StaffSync',
     desc:   'HR management system for employee records, payroll processing, and automated payslip generation.',
     tags:   ['Vue', 'Node.js', 'Python'],
-    github: 'https://github.com/MDtechcave',
+    github: 'https://github.com/MDtechcave/Moderntech_center',
   },
 ]
 </script>
