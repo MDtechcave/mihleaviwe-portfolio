@@ -16,10 +16,6 @@
 
       <div class="hero-actions">
         <a href="mailto:mihleaviwe6@gmail.com" class="btn-primary">Get in Touch</a>
-        <a href="https://github.com/MDtechcave" target="_blank" class="btn-secondary">
-          View GitHub
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
       </div>
 
       <div class="hero-skills">

@@ -37,6 +37,7 @@ const projects = [
     desc:   'Cultural gallery showcasing Xhosa heritage through an interactive, responsive web experience designed to educate and engage.',
     tags:   ['HTML', 'CSS', 'JavaScript'],
     github: 'https://github.com/MDtechcave/My-Gallery',
+    live: 'https://your-live-site.com'
   },
   {
     title:  'Healthy Habits',
