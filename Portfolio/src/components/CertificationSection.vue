@@ -17,7 +17,7 @@
           <span class="year">{{ cert.year }}</span>
         </div>
 
-        <h3 class="cert-title">{{ cert.title }}</h3>
+        <h2 class="cert-title">{{ cert.title }}</h2>
         <p class="cert-issuer">{{ cert.issuer }}</p>
 
         <a v-if="cert.link" :href="cert.link" target="_blank" class="cert-link">
@@ -45,7 +45,7 @@ const certifications = [
   {
     title: "Introduction to Data Science",
     issuer: "Credly",
-    platform: "Cisco",
+    platform: "Cisco Networking Academy",
     year: "2026",
     link: "https://www.credly.com/badges/b432a16f-dff2-4edd-adc8-93a3927ab9e7/public_url"
   },

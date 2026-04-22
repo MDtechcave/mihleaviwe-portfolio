@@ -18,7 +18,7 @@
           </div>
         </div>
 
-        <h3 class="project-title">{{ project.title }}</h3>
+        <h2 class="project-title">{{ project.title }}</h2>
         <p class="project-desc">{{ project.desc }}</p>
 
         <div class="tags">
@@ -42,13 +42,13 @@ const projects = [
   {
     title:  'Healthy Habits',
     desc:   'E-commerce meal subscription platform with user accounts, subscription management, and loyalty-based discount logic.',
-    tags:   ['Vue', 'MySQL'],
+    tags:   ['Vue', 'MySQL', 'Node.js'],
     github: 'https://github.com/MDtechcave/Frontend',
   },
   {
     title:  'StaffSync',
     desc:   'HR management system for employee records, payroll processing, and automated payslip generation.',
-    tags:   ['Vue', 'Node.js', 'Python'],
+    tags:   ['Vue', 'Node.js'],
     github: 'https://github.com/MDtechcave/Moderntech_center',
   },
 ]

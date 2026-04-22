@@ -4,10 +4,10 @@
 
       <span class="section-label">Full Stack Developer · Based in Cape Town</span>
 
-      <h1 class="title">
+      <h2 class="title">
         Mihle<br />
         <em>Dudumashe</em>
-      </h1>
+      </h2>
 
       <p class="subtitle">
         Building clean, scalable web applications with Vue, Node &amp; Python.
