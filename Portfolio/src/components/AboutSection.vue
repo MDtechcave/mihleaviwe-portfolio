@@ -26,7 +26,7 @@
         <div class="card skill-card" v-for="item in skills" :key="item.title">
           <div class="card-icon">{{ item.icon }}</div>
           <div>
-            <h2 class="card-title">{{ item.title }}</h2>
+            <h1 class="card-title">{{ item.title }}</h1>
             <p class="card-desc">{{ item.desc }}</p>
           </div>
         </div>

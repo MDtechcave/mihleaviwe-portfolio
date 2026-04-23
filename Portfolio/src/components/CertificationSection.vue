@@ -62,19 +62,26 @@ const certifications = [
 </script>
 
 <style scoped>
+.title {
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 18px;
+  line-height: 1.15;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
 .cert-card {
-  padding: 24px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
 }
 
+/* Match project card top layout */
 .cert-top {
   display: flex;
   justify-content: space-between;
@@ -84,8 +91,8 @@ const certifications = [
 .platform {
   font-size: 12px;
   font-weight: 600;
+  letter-spacing: 0.1em;
   color: var(--accent);
-  letter-spacing: 0.05em;
 }
 
 .year {
@@ -93,30 +100,39 @@ const certifications = [
   color: var(--text-muted);
 }
 
+/* Match project title */
 .cert-title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--text);
 }
 
+/* Match project description style */
 .cert-issuer {
   font-size: 14px;
+  line-height: 1.6;
   color: var(--text-muted);
 }
 
-.cert-link {
-  margin-top: 6px;
+/* Link styles aligned with project icons/text */
+.cert-link,
+.cert-request {
+  margin-top: auto;
   font-size: 13px;
+}
+
+.cert-link {
   color: var(--accent);
   text-decoration: none;
+  transition: opacity 0.2s ease;
 }
+
+.cert-link:hover {
+  opacity: 0.7;
+}
+
 .cert-request {
-  margin-top: 6px;
-  font-size: 13px;
   color: var(--text-muted);
   font-style: italic;
-}
-.cert-link:hover {
-  text-decoration: underline;
 }
 </style>

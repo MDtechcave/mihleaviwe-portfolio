@@ -18,7 +18,7 @@
           </div>
         </div>
 
-        <h2 class="project-title">{{ project.title }}</h2>
+        <h1 class="project-title">{{ project.title }}</h1>
         <p class="project-desc">{{ project.desc }}</p>
 
         <div class="tags">
@@ -53,35 +53,24 @@ const projects = [
   },
 ]
 </script>
-
 <style scoped>
-.section-header {
-  margin-bottom: 40px;
-}
-
 .title {
-  font-size: clamp(30px, 4vw, 44px);
-  margin-bottom: 10px;
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 18px;
+  line-height: 1.15;
 }
 
-.subtitle {
-  font-size: 16px;
-  color: var(--text-muted);
-}
-
-/* Grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 
-/* Project card */
 .project-card {
-  padding: 28px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
 }
 
 .card-top {
@@ -93,66 +82,51 @@ const projects = [
 .project-number {
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.1em;
   color: var(--accent);
-  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
 }
 
 .icon-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: var(--bg-soft);
-  border: 1px solid var(--border);
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
   color: var(--text-muted);
-  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .icon-link:hover {
   color: var(--accent);
-  border-color: var(--accent-mid);
-  background: var(--accent-soft);
-  opacity: 1;
 }
 
+/* Match cert title size */
 .project-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--text);
 }
 
+/* Match cert text */
 .project-desc {
   font-size: 14px;
-  line-height: 1.7;
   color: var(--text-muted);
-  flex: 1;
+  line-height: 1.6;
 }
 
-/* Tags */
+/* Tags (simplified) */
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: auto;
+  gap: 6px;
+  margin-top: 6px;
 }
 
 .tag {
-  font-size: 11.5px;
-  font-weight: 500;
-  padding: 5px 11px;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent);
-  border: 1px solid var(--accent-mid);
-  letter-spacing: 0.01em;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--bg-soft);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
 }
 </style>
