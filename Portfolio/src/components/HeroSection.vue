@@ -16,7 +16,7 @@
 
       <div class="hero-actions">
         <a href="mailto:mihleaviwe6@gmail.com" class="btn-primary">Get in Touch</a>
-        <a href="/Mihle_Dudumashe_CV.pdf" download class="btn-secondary">Download CV</a>
+        <a href="/Mihle_dudumashe_CV.pdf" download class="btn-secondary">Download CV</a>
       </div>
 
       <div class="hero-skills">
