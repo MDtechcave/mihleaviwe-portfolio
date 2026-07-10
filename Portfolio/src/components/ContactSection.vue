@@ -8,7 +8,7 @@
         <h2 class="title">Let's work<br /><em>together</em></h2>
         <p class="subtitle">
           Open to full-time roles, freelance projects, and internship opportunities.
-          Feel free to reach out — I'd love to connect.
+          Feel free to reach out - I'd love to connect.
         </p>
       </div>
 
