@@ -10,7 +10,7 @@
       </h2>
 
       <p class="subtitle">
-        Backend-focused full-stack developer. I build the systems behind the product —
+        Backend-focused full-stack developer. I build the systems behind the product
         APIs, databases, business logic and bring them all the way to the frontend.
       </p>
 
@@ -24,7 +24,6 @@
         <div class="skill-pill"><span class="dot"></span>REST APIs</div>
         <div class="skill-pill"><span class="dot"></span>SQL & Databases</div>
         <div class="skill-pill"><span class="dot"></span>Vue & React</div>
-        <div class="skill-pill"><span class="dot"></span>Cybersecurity</div>
       </div>
 
     </div>

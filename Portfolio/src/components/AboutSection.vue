@@ -9,14 +9,13 @@
           <em>backend-first mindset</em>
         </h2>
         <p class="intro">
-          I focus on what happens on the server — API design, database logic,
+          I focus on what happens on the server, API design, database logic,
           authentication, and system architecture. The frontend comes along for the ride.
         </p>
         <p class="body">
           My main stack is Node.js, Python/FastAPI, Vue, and SQL databases including
           MySQL and Supabase/PostgreSQL. I've built production-level systems with
           role-based access control, SQL triggers, payroll logic, and REST APIs.
-          Actively expanding into cybersecurity and SOC operations.
         </p>
       </div>
 
@@ -36,10 +35,10 @@
 
 <script setup>
 const skills = [
-  { icon: '⬡', title: 'Backend',    desc: 'Node.js, Python, FastAPI, REST APIs, auth' },
-  { icon: '⬡', title: 'Databases',  desc: 'MySQL, PostgreSQL, Supabase, SQL triggers' },
-  { icon: '⬡', title: 'Frontend',   desc: 'Vue, React, responsive UI, clean layouts' },
-  { icon: '⬡', title: 'Security',   desc: 'SOC concepts, RBAC, system defense' },
+  { icon: '⬡', title: 'Backend',   desc: 'Node.js, Python, FastAPI, REST APIs, auth' },
+  { icon: '⬡', title: 'Databases', desc: 'MySQL, PostgreSQL, Supabase, SQL triggers' },
+  { icon: '⬡', title: 'Frontend',  desc: 'Vue, React, responsive UI, clean layouts' },
+  { icon: '⬡', title: 'DevOps',    desc: 'Git, Vercel, Render, Netlify, deployment' },
 ]
 </script>
 
