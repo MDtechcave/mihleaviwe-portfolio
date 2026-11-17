@@ -1,8 +1,9 @@
+
 <template>
   <section class="hero">
     <div class="hero-inner">
 
-      <span class="section-label">Full Stack Developer · Cape Town</span>
+      <span class="section-label">Full-Stack Developer · Cape Town</span>
 
       <h2 class="title">
         Mihle<br />
@@ -10,20 +11,28 @@
       </h2>
 
       <p class="subtitle">
-        Backend-focused full-stack developer. I build the systems behind the product
-        APIs, databases, business logic and bring them all the way to the frontend.
+        Full-Stack Developer passionate about building functional
+        web applications. I work across frontend and backend
+        development, turning ideas into applications through
+        clean interfaces, APIs and database integration.
       </p>
 
       <div class="hero-actions">
-        <a href="mailto:mihleaviwe6@gmail.com" class="btn-primary">Get in Touch</a>
-        <a href="/Mihle_dudumashe_CV.pdf" download class="btn-secondary">Download CV</a>
+        <a href="mailto:mihleaviwe6@gmail.com" class="btn-primary">
+          Get in Touch
+        </a>
+
+        <a href="/Mihle_dudumashe_CV.pdf" download class="btn-secondary">
+          Download CV
+        </a>
       </div>
 
       <div class="hero-skills">
-        <div class="skill-pill"><span class="dot"></span>Node.js & Python</div>
+        <div class="skill-pill"><span class="dot"></span>Python & FastAPI</div>
+        <div class="skill-pill"><span class="dot"></span>Vue.js & Next.js</div>
+        <div class="skill-pill"><span class="dot"></span>MySQL & PostgreSQL</div>
+        <div class="skill-pill"><span class="dot"></span>Supabase & Firebase</div>
         <div class="skill-pill"><span class="dot"></span>REST APIs</div>
-        <div class="skill-pill"><span class="dot"></span>SQL & Databases</div>
-        <div class="skill-pill"><span class="dot"></span>Vue & React</div>
       </div>
 
     </div>
@@ -195,7 +204,7 @@
 
 @keyframes spin {
   from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  to { transform: rotate(360deg); }
 }
 
 @media (max-width: 820px) {
@@ -205,10 +214,15 @@
     min-height: unset;
     padding-top: 60px;
   }
-  .hero-decoration { display: none; }
+
+  .hero-decoration {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
-  .title { font-size: 46px; }
+  .title {
+    font-size: 46px;
+  }
 }
 </style>

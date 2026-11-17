@@ -1,14 +1,22 @@
+
 <template>
   <section class="certifications section">
 
     <div class="section-header">
-      <span class="section-label">Certifications</span>
-      <h2 class="title">Credentials</h2>
-      <p class="subtitle">Certifications completed to build and validate technical skills.</p>
+      <span class="section-label">LEARNING & DEVELOPMENT</span>
+      <h2 class="title">Certifications & Training</h2>
+      <p class="subtitle">
+        Professional training and certifications supporting my development
+        as a full-stack developer.
+      </p>
     </div>
 
     <div class="grid">
-      <div class="cert-card" v-for="cert in certifications" :key="cert.title">
+      <div
+        class="cert-card"
+        v-for="cert in certifications"
+        :key="cert.title"
+      >
 
         <div class="cert-top">
           <span class="platform">{{ cert.platform }}</span>
@@ -18,10 +26,19 @@
         <h3 class="cert-title">{{ cert.title }}</h3>
         <p class="cert-issuer">{{ cert.issuer }}</p>
 
-        <a v-if="cert.link" :href="cert.link" target="_blank" class="cert-link">
+        <a
+          v-if="cert.link"
+          :href="cert.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cert-link"
+        >
           View Certificate →
         </a>
-        <span v-else class="cert-request">Available upon request</span>
+
+        <span v-else class="cert-request">
+          Available upon request
+        </span>
 
       </div>
     </div>
@@ -32,26 +49,26 @@
 <script setup>
 const certifications = [
   {
-    title:    'Introduction to Cybersecurity',
-    issuer:   'Credly',
+    title: 'Introduction to Cybersecurity',
+    issuer: 'Cisco Networking Academy',
     platform: 'Cisco Networking Academy',
-    year:     '2026',
-    link:     'https://www.credly.com/badges/2ec9ea7f-958b-4a3f-a5da-e0612ef936b4/public_url'
+    year: '2026',
+    link: 'https://www.credly.com/badges/2ec9ea7f-958b-4a3f-a5da-e0612ef936b4/public_url'
   },
   {
-    title:    'Introduction to Data Science',
-    issuer:   'Credly',
+    title: 'Introduction to Data Science',
+    issuer: 'Cisco Networking Academy',
     platform: 'Cisco Networking Academy',
-    year:     '2026',
-    link:     'https://www.credly.com/badges/b432a16f-dff2-4edd-adc8-93a3927ab9e7/public_url'
+    year: '2026',
+    link: 'https://www.credly.com/badges/b432a16f-dff2-4edd-adc8-93a3927ab9e7/public_url'
   },
   {
-    title:    'Full Stack Development',
-    issuer:   'Life Choices Academy',
+    title: 'Full Stack Development',
+    issuer: 'Life Choices Academy',
     platform: 'Life Choices Academy',
-    year:     '2026',
-    link:     ''
-  },
+    year: '2026',
+    link: ''
+  }
 ]
 </script>
 
@@ -89,6 +106,7 @@ const certifications = [
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 
 .platform {

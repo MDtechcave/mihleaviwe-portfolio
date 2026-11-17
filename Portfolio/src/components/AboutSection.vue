@@ -1,27 +1,41 @@
+
 <template>
   <section class="about section">
     <div class="about-grid">
 
       <div class="about-text">
         <span class="section-label">About Me</span>
+
         <h2 class="title">
-          Full-stack dev with a<br />
-          <em>backend-first mindset</em>
+          Full-stack developer<br />
+          <em>building for the web.</em>
         </h2>
+
         <p class="intro">
-          I focus on what happens on the server, API design, database logic,
-          authentication, and system architecture. The frontend comes along for the ride.
+          I'm a Full-Stack Developer who enjoys turning ideas into
+          functional web applications. I work across the frontend
+          and backend, building user interfaces, developing APIs,
+          and connecting applications to databases.
         </p>
+
         <p class="body">
-          My main stack is Node.js, Python/FastAPI, Vue, and SQL databases including
-          MySQL and Supabase/PostgreSQL. I've built production-level systems with
-          role-based access control, SQL triggers, payroll logic, and REST APIs.
+          My core technologies include Python and FastAPI for backend
+          development, Vue.js and Next.js for frontend development,
+          and MySQL, Supabase, and Firebase for database management.
+          I enjoy working across the full development process,
+          solving problems, and continuously improving my skills
+          by building practical applications.
         </p>
       </div>
 
       <div class="highlights">
-        <div class="skill-card" v-for="item in skills" :key="item.title">
+        <div
+          class="skill-card"
+          v-for="item in skills"
+          :key="item.title"
+        >
           <div class="card-icon">{{ item.icon }}</div>
+
           <div>
             <h3 class="card-title">{{ item.title }}</h3>
             <p class="card-desc">{{ item.desc }}</p>
@@ -35,10 +49,26 @@
 
 <script setup>
 const skills = [
-  { icon: '⬡', title: 'Backend',   desc: 'Node.js, Python, FastAPI, REST APIs, auth' },
-  { icon: '⬡', title: 'Databases', desc: 'MySQL, PostgreSQL, Supabase, SQL triggers' },
-  { icon: '⬡', title: 'Frontend',  desc: 'Vue, React, responsive UI, clean layouts' },
-  { icon: '⬡', title: 'DevOps',    desc: 'Git, Vercel, Render, Netlify, deployment' },
+  {
+    icon: '⬡',
+    title: 'Backend Development',
+    desc: 'Python, FastAPI, REST APIs, authentication'
+  },
+  {
+    icon: '⬡',
+    title: 'Frontend Development',
+    desc: 'Vue.js, Next.js, JavaScript, responsive interfaces'
+  },
+  {
+    icon: '⬡',
+    title: 'Databases',
+    desc: 'MySQL, Supabase, PostgreSQL, Firebase'
+  },
+  {
+    icon: '⬡',
+    title: 'Full-Stack Development',
+    desc: 'API integration, application logic, complete web applications'
+  }
 ]
 </script>
 

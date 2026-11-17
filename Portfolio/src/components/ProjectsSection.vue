@@ -1,159 +1,331 @@
+
 <template>
-  <section class="projects section">
+  <section id="projects" class="projects-section">
+    <div class="section-container">
 
-    <div class="section-header">
-      <span class="section-label">Projects</span>
-      <h2 class="title">Selected Work</h2>
-      <p class="subtitle">End-to-end systems built across the full stack.</p>
-    </div>
-
-    <div class="grid">
-      <div class="project-card" v-for="(project, i) in projects" :key="project.title">
-        <div class="card-top">
-          <span class="project-number">0{{ i + 1 }}</span>
-          <div class="card-links">
-            <a v-if="project.live" :href="project.live" target="_blank" class="icon-link" aria-label="Live site">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                <path d="M15 3h6v6"/><path d="M10 14L21 3"/>
-              </svg>
-            </a>
-            <a v-if="project.github" :href="project.github" target="_blank" class="icon-link" aria-label="GitHub">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <h3 class="project-title">{{ project.title }}</h3>
-        <p class="project-desc">{{ project.desc }}</p>
-
-        <div class="tags">
-          <span v-for="tag in project.tags" :key="tag" class="tag">{{ tag }}</span>
-        </div>
+      <div class="section-heading">
+        <span class="section-label">MY WORK</span>
+        <h2>Projects I've built.</h2>
+        <p>
+          Applications and systems I've built to solve practical problems
+          and explore different technologies.
+        </p>
       </div>
-    </div>
 
+      <div class="projects-grid">
+        <article
+          v-for="(project, index) in projects"
+          :key="project.title"
+          class="project-card"
+        >
+          <div class="project-top">
+            <span class="project-number">
+              {{ String(index + 1).padStart(2, '0') }}
+            </span>
+
+            <span class="project-type">
+              {{ project.type }}
+            </span>
+          </div>
+
+          <div class="project-content">
+            <h3>{{ project.title }}</h3>
+
+            <p class="project-description">
+              {{ project.description }}
+            </p>
+
+            <div class="project-tags">
+              <span
+                v-for="tag in project.tags"
+                :key="tag"
+                class="project-tag"
+              >
+                {{ tag }}
+              </span>
+            </div>
+          </div>
+
+          <div class="project-links">
+            <a
+              v-if="project.github"
+              :href="project.github"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              GitHub
+              <span>↗</span>
+            </a>
+
+            <a
+              v-if="project.live"
+              :href="project.live"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              Live Demo
+              <span>↗</span>
+            </a>
+
+            <span
+              v-if="!project.github && !project.live"
+              class="project-coming-soon"
+            >
+              Links coming soon
+            </span>
+          </div>
+        </article>
+      </div>
+
+    </div>
   </section>
 </template>
 
 <script setup>
 const projects = [
   {
-    title:  'StaffSync',
-    desc:   'Full HR system with FastAPI backend, role-based access control, SQL triggers for leave management, payroll processing, and automated payslip generation.',
-    tags:   ['Python', 'FastAPI', 'Vue', 'Supabase', 'PostgreSQL'],
-    github: 'https://github.com/MDtechcave/Moderntech_center',
-    live:   'https://moderntech-center.vercel.app/'
+    title: "StaffSync",
+    type: "Full-Stack Web Application",
+    description:
+      "An HR management application designed to simplify employee management. It includes role-based access, employee records, leave management, payroll functionality and payslip management.",
+    tags: [
+      "Python",
+      "FastAPI",
+      "Vue.js",
+      "Supabase",
+      "PostgreSQL"
+    ],
+    github: "https://github.com/MDtechcave/Moderntech_center",
+    live: "https://moderntech-center.vercel.app/"
   },
+
   {
-    title:  'Healthy Habits',
-    desc:   'E-commerce meal subscription platform with Node.js backend, user authentication, subscription management, Stripe payments, and loyalty-based discount logic.',
-    tags:   ['Vue', 'Node.js', 'MySQL', 'Express'],
-    github: 'https://github.com/MDtechcave/Frontend',
-    live:   ''
+    title: "Kopano Industrial Supply",
+    type: "Full-Stack Web Application · Assessment Project",
+    description:
+      "A B2B catalogue and quotation management platform designed to help customers browse industrial products and submit requests for quotations. Includes separate experiences for clients, sales staff and administrators, supported by a REST API and automated tests.",
+    tags: [
+      "Python",
+      "FastAPI",
+      "React",
+      "SQLite",
+      "REST APIs",
+      "Pytest"
+    ],
+    github: "",
+    live: ""
   },
+
   {
-    title:  'Imvelaphi Gallery',
-    desc:   'Cultural gallery showcasing Xhosa heritage through an interactive, responsive web experience built from scratch.',
-    tags:   ['HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/MDtechcave/My-Gallery',
-    live:   ''
+    title: "Healthy Habits",
+    type: "Full-Stack E-Commerce Application",
+    description:
+      "An e-commerce application for healthy weekly meal subscriptions. Includes user authentication, meal ordering, subscription management, payment integration and a loyalty discount system.",
+    tags: [
+      "Vue.js",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "Stripe"
+    ],
+    github: "https://github.com/MDtechcave/Frontend",
+    live: ""
   },
-]
+
+  {
+    title: "Lungisani",
+    type: "Mobile Application · Personal Project",
+    description:
+      "A civic reporting application that allows Cape Town residents to report municipal issues such as potholes, water problems, sewage and uncollected waste. Residents can submit reports with photos, view community reports and upvote existing issues to make recurring problems more visible.",
+    tags: [
+      "Flutter",
+      "Dart",
+      "Supabase",
+      "Riverpod",
+      "PostgreSQL"
+    ],
+    github: "",
+    live: ""
+  }
+];
 </script>
 
 <style scoped>
-.title {
-  font-size: clamp(30px, 4vw, 46px);
-  margin-bottom: 12px;
-  line-height: 1.15;
+.projects-section {
+  padding: 100px 24px;
+  background: var(--bg-primary, #ffffff);
 }
 
-.grid {
+.section-container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  max-width: 650px;
+  margin-bottom: 55px;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--accent-color, #64748b);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  margin: 0 0 15px;
+  color: var(--text-primary, #172033);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 750;
+  letter-spacing: -1.5px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  background: var(--border);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .project-card {
-  padding: 28px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  background: var(--bg-card);
-  transition: background 0.2s ease;
+  min-height: 340px;
+  padding: 30px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 18px;
+  background: var(--card-bg, #ffffff);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .project-card:hover {
-  background: var(--bg-soft);
+  transform: translateY(-5px);
+  border-color: var(--accent-color, #64748b);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
 }
 
-.card-top {
+.project-top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 30px;
 }
 
 .project-number {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--accent);
-  letter-spacing: 0.08em;
+  color: var(--accent-color, #64748b);
+  font-size: 0.85rem;
+  font-weight: 700;
 }
 
-.icon-link {
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-light);
-  border-radius: var(--radius-sm);
-  transition: color 0.2s ease;
+.project-type {
+  color: var(--text-secondary, #64748b);
+  font-size: 0.72rem;
+  text-align: right;
 }
 
-.icon-link:hover {
-  color: var(--accent);
-  opacity: 1;
-}
-
-.card-links {
-  display: flex;
-  gap: 4px;
-}
-
-.project-title {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.project-desc {
-  font-size: 13px;
-  color: var(--text-muted);
-  line-height: 1.65;
+.project-content {
   flex: 1;
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 4px;
+.project-content h3 {
+  margin: 0 0 14px;
+  color: var(--text-primary, #172033);
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
-.tag {
-  font-size: 11px;
-  padding: 3px 8px;
-  border-radius: var(--radius-sm);
-  background: var(--bg-soft);
-  color: var(--text-muted);
-  border: 1px solid var(--border);
+.project-description {
+  margin: 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.project-tag {
+  padding: 7px 11px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 6px;
+  color: var(--text-secondary, #64748b);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color, #e5e7eb);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-primary, #172033);
+  font-size: 0.85rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover {
+  color: var(--accent-color, #64748b);
+}
+
+.project-link span {
+  font-size: 1rem;
+}
+
+.project-coming-soon {
+  color: var(--text-secondary, #64748b);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 700px) {
+  .projects-section {
+    padding: 75px 18px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .project-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-type {
+    text-align: left;
+  }
 }
 </style>
