@@ -22,7 +22,7 @@
           Get in Touch
         </a>
 
-        <a href="/Mihle_dudumashe_CV.pdf" download class="btn-secondary">
+        <a href="/Mihle Dudumashe Resume.pdf" download class="btn-secondary">
           Download CV
         </a>
       </div>
