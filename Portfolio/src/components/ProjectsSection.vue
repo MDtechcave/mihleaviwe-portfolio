@@ -101,38 +101,39 @@ const projects = [
     live: "https://moderntech-center.vercel.app/"
   },
 
-  {
-    title: "Kopano Industrial Supply",
-    type: "Full-Stack Web Application · Assessment Project",
-    description:
-      "A B2B catalogue and quotation management platform designed to help customers browse industrial products and submit requests for quotations. Includes separate experiences for clients, sales staff and administrators, supported by a REST API and automated tests.",
-    tags: [
-      "Python",
-      "FastAPI",
-      "React",
-      "SQLite",
-      "REST APIs",
-      "Pytest"
-    ],
-    github: "",
-    live: ""
-  },
+  
 
-  {
-    title: "Healthy Habits",
-    type: "Full-Stack E-Commerce Application",
-    description:
-      "An e-commerce application for healthy weekly meal subscriptions. Includes user authentication, meal ordering, subscription management, payment integration and a loyalty discount system.",
-    tags: [
-      "Vue.js",
-      "Node.js",
-      "Express",
-      "MySQL",
-      "Stripe"
-    ],
-    github: "https://github.com/MDtechcave/Frontend",
-    live: ""
-  },
+{
+  title: "Kopano Industrial Supply",
+  type: "Full-Stack Web Application · Assessment Project",
+  description:
+    "A B2B catalogue and quotation management platform where customers can browse industrial products and submit requests for quotations. Features role-based access for clients, sales staff and administrators, an admin team management dashboard, a REST API and automated backend tests.",
+  tags: [
+    "Python",
+    "FastAPI",
+    "React",
+    "SQLite",
+    "REST APIs",
+    "Pytest",
+    "Role-Based Authentication"
+  ],
+  github: "https://github.com/MDtechcave/kopano.git",
+  live: "kopano-tan.vercel.app",
+  demoAccounts: [
+
+    {
+      role: "Sales",
+      email: "tumelo@example.com",
+      password: "tumelokafi7784"
+    },
+    {
+      role: "Admin",
+      email: "admin@example.com",
+      password: "lewismikey@kopano"
+    }
+  ]
+},
+
 
   {
     title: "Lungisani",
@@ -298,11 +299,6 @@ const projects = [
 
 .project-link span {
   font-size: 1rem;
-}
-
-.project-coming-soon {
-  color: var(--text-secondary, #64748b);
-  font-size: 0.82rem;
 }
 
 @media (max-width: 700px) {
